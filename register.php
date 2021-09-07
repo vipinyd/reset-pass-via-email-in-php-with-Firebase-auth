@@ -25,7 +25,7 @@
             'emailVerified' => false,
             'password' => $pass,
         ];
-        // firebase query to create a user in remote database of fire base
+        // firebase query to create a user in remote database of fire base  
         $createdUser = $auth->createUser($userProperties);
         if ($createdUser) {
             echo "<script>alert('Registration success!!')</script>";
