@@ -6,6 +6,6 @@ unset($_SESSION['user']);
 header('location:login.php');
 
 $_SESSION['status'] = "logged out"; 
-header('location:login.php');
+header('location:login.php'); // 
 exit();
 ?>
