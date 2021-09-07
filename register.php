@@ -18,7 +18,7 @@
         $email = $_POST["email"];
         $pass = $_POST["password"];
         $cpass = $_POST["cpass"];
-
+        //
         $userProperties = [
             'displayName' => $name,
             'email' => $email,
