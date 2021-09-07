@@ -13,7 +13,7 @@
 </head>
 <?php
 session_start();
-include('dbconn.php');
+include('dbconn.php'); 
 
 if (isset($_POST["login"])) {
     $email = $_POST["email"];
@@ -21,18 +21,18 @@ if (isset($_POST["login"])) {
 
     try {
 
-        $user = $auth->getUserByEmail("$email");
+        $user = $auth->getUserByEmail("$email"); // check user by email exist in remote databse or not
 
         $signInResult = $auth->signInWithEmailAndPassword($email, $clearTextPassword);
         $idTokenString = $signInResult->idToken();
-        $data = $signInResult->data();
+        $data = $signInResult->data(); // fetching all data of user in $data
         try {
             $verifiedIdToken = $auth->verifyIdToken($idTokenString);
-            $uid = $verifiedIdToken->claims()->get('sub');
+            $uid = $verifiedIdToken->claims()->get('sub'); 
 
             $_SESSION['verified_user_id'] = $uid;
             $_SESSION['status'] = "you are logged in succesfully";
-            $_SESSION['user'] = $data['displayName'];
+            $_SESSION['user'] = $data['displayName'];// storing user name in session
             header('location:user.php');
             exit();
         } catch (InvalidToken $e) {
@@ -50,6 +50,7 @@ if (isset($_POST["login"])) {
 
 ?>
 
+ <!-- html template for login -->
 <body>
     <div class="main-w3layouts wrapper">
         <h1>Login here!!</h1>

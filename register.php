@@ -25,6 +25,7 @@
             'emailVerified' => false,
             'password' => $pass,
         ];
+        // firebase query to create a user in remote database of fire base
         $createdUser = $auth->createUser($userProperties);
         if ($createdUser) {
             echo "<script>alert('Registration success!!')</script>";
@@ -34,7 +35,7 @@
         }
     }
     ?>
-
+  <!-- html template for registrtion for -->
     <div class="main-w3layouts wrapper">
         <h1>Firebase Register user</h1>
         <div class="main-agileinfo">

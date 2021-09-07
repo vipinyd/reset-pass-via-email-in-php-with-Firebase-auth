@@ -1,4 +1,5 @@
 <?php
+// to logout and unsetting session
 session_start();
 unset($_SESSION['verified_user_id']);
 unset($_SESSION['user']);

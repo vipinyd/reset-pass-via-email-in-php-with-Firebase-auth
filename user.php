@@ -2,7 +2,7 @@
 session_start(); ?>
 <!DOCTYPE html>
 <html>
-
+<!-- html template to for showing user who succesfully logged in -->
 <head>
     <title>FireBase</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">

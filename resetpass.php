@@ -17,7 +17,7 @@ if (isset($_POST["submit"])) {
 
     $email = $_POST["email"];
 
-    $auth->sendPasswordResetLink($email);
+    $auth->sendPasswordResetLink($email);// firbase script to send email with reset link
 
     echo "<script>alert('Reset link sent to your email id')</script>";
 
