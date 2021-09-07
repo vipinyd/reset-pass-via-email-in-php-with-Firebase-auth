@@ -1,5 +1,5 @@
 <?php
-// remote database connection
+// remote database connection of firebase and keys
 require __DIR__.'/vendor/autoload.php';
 use Kreait\Firebase\Factory;
 use Kreait\Firebase\Auth;
