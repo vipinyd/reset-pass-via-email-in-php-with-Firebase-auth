@@ -11,4 +11,4 @@
 
 # database 
 
--in above given script dbconn.php which is used to connect with firebase 
+- in above given script dbconn.php which is used to connect with firebase 
